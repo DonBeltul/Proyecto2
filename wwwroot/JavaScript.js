@@ -1,8 +1,22 @@
-﻿function inversion()
-{
-    let texto1 = document.getElementById("texto1").value;
-    let texto2 = document.getElementById("texto2").value;
-    let texto3 = document.getElementById("texto3");
-    texto3.style.display = "block";
-    texto3.value = texto2 + " " + texto1;
+﻿function sumar(operando1, operando2) {
+    return operando1 + operando2;
 }
+function restar(operando1, operando2) {
+    return operando1 - operando2;
+}
+function multiplicar(operando1, operando2) {
+    return operando1 * operando2;
+}
+function tomaVal(nombreOperando) {
+    return Number(document.getElementById(nombreOperando).value);
+}
+function ponVal(elemento, valor) {
+    document.getElementById(elemento).value = valor.toString();
+}
+function pulseSumar() {
+    var operando1 = tomaVal("operando1");
+    var operando2 = tomaVal("operando2");
+}
+var boton = document.getElementById("sumar");
+boton.addEventListener("click", pulseSumar);
+//# sourceMappingURL=principal.js.map
